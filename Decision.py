@@ -169,179 +169,179 @@
 
 
 
-a=input("enter the string :")
+# a=input("enter the string :")
 
-if a==a[::-1]:
-    print(f"{a} is a palindrome")
-else:
-    print("Not a palindrome")
-
-
-
-# decision making (if ,elif and else)
-
-a=int(input("Enter a number "))
-if a>0:
-    print("given number is positive ")
-elif a<0:
-    print("given number is negative ")
-else:
-    print("Given number is Zero ")
-
-
-# odd even
-a=int(input("Enter a number "))
-if a%2==0:
-    print("number is even ")
-else:
-    print("Number is odd")
+# if a==a[::-1]:
+#     print(f"{a} is a palindrome")
+# else:
+#     print("Not a palindrome")
 
 
 
-# vote eligibility
+# # decision making (if ,elif and else)
 
-age=int(input("Enter the age :"))
-if age>=18:
-    print("You are eligible to vote ")
-else:
-    print("You are not eligible to vote ")
-
-
-#largest of two number
-
-a=int(input("enter first number :"))
-b=int(input("enter second number :"))
-
-if a>b:
-    print("a is lagest")
-elif a<b:
-    print("b is the largest ")
-else:
-    print("both are equal ")
+# a=int(input("Enter a number "))
+# if a>0:
+#     print("given number is positive ")
+# elif a<0:
+#     print("given number is negative ")
+# else:
+#     print("Given number is Zero ")
 
 
-# divisible by 5 and 7 
-
-a=int(input("enter a number :"))
-
-if (a%5==0) and (a%7==0):
-    print("given number is divisible by both (5 and 7) ")
-elif (a%5==0) and (a%7!=0):
-    print("given number is only divisible by 5 ")
-elif (a%7==0) and (a%5!=0):
-    print("given number is only divisible by 7 ")
-else:
-    print("given number is not divisible by 5 and 7 ")
-
-# leap year
-
-year = int(input("Enter a year: "))
-if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-    print("Leap year")
-else:
-    print("Not a leap year")
-
-# classify vowel
-a=input("enter a character :").lower()
-vowels="aeiou"
-if a in vowels:
-    print("it is a vowel ")
-else:
-    print("it is a consonet")
+# # odd even
+# a=int(input("Enter a number "))
+# if a%2==0:
+#     print("number is even ")
+# else:
+#     print("Number is odd")
 
 
-# valid triangle
 
-side1=int(input("enter a side :"))
-side2=int(input("enter a side :"))
-side3=int(input("enter a side :"))
-if side1+side2+side3==180:
-    print("its a valid traingle ")
-else:
-    print("not a valid triangle")
+# # vote eligibility
+
+# age=int(input("Enter the age :"))
+# if age>=18:
+#     print("You are eligible to vote ")
+# else:
+#     print("You are not eligible to vote ")
+
+
+# #largest of two number
+
+# a=int(input("enter first number :"))
+# b=int(input("enter second number :"))
+
+# if a>b:
+#     print("a is lagest")
+# elif a<b:
+#     print("b is the largest ")
+# else:
+#     print("both are equal ")
+
+
+# # divisible by 5 and 7 
+
+# a=int(input("enter a number :"))
+
+# if (a%5==0) and (a%7==0):
+#     print("given number is divisible by both (5 and 7) ")
+# elif (a%5==0) and (a%7!=0):
+#     print("given number is only divisible by 5 ")
+# elif (a%7==0) and (a%5!=0):
+#     print("given number is only divisible by 7 ")
+# else:
+#     print("given number is not divisible by 5 and 7 ")
+
+# # leap year
+
+# year = int(input("Enter a year: "))
+# if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+#     print("Leap year")
+# else:
+#     print("Not a leap year")
+
+# # classify vowel
+# a=input("enter a character :").lower()
+# vowels="aeiou"
+# if a in vowels:
+#     print("it is a vowel ")
+# else:
+#     print("it is a consonet")
+
+
+# # valid triangle
+
+# side1=int(input("enter a side :"))
+# side2=int(input("enter a side :"))
+# side3=int(input("enter a side :"))
+# if side1+side2+side3==180:
+#     print("its a valid traingle ")
+# else:
+#     print("not a valid triangle")
 
    
 
-# Loops
+# # Loops
 
-for i in range(1,11):
-    print(i)
-
-
-a=1
-while(a<=10):
-    print(a)
-    a+=1
+# for i in range(1,11):
+#     print(i)
 
 
-for i in range(1,21):
-    if i%2==0:
-        print(f"even number {i}")
+# a=1
+# while(a<=10):
+#     print(a)
+#     a+=1
 
 
-# sum of first 10 natural number
-sum_nn=sum(range(1,11))
-print(sum_nn)
+# for i in range(1,21):
+#     if i%2==0:
+#         print(f"even number {i}")
 
 
-sum_nn=0
-for num in range(1,11):
-    sum_nn+=num
-print("Sum:", sum_nn)
+# # sum of first 10 natural number
+# sum_nn=sum(range(1,11))
+# print(sum_nn)
 
 
-# using while loop
-sum_nn = 0
-num = 1
-while num <= 10:  
-    sum_nn += num
-    num += 1
-print("Sum:", sum_nn)
+# sum_nn=0
+# for num in range(1,11):
+#     sum_nn+=num
+# print("Sum:", sum_nn)
 
 
-# table multiplication
-
-n=int(input("enter a number : "))
-for i in range(1,11):
-    print(f"{n} X {i} =",n*i)
-
-
-for i in range(1,6):
-    print("*"*i)
-
-for i in range(5,0,-1):
-    print("*"*i)
+# # using while loop
+# sum_nn = 0
+# num = 1
+# while num <= 10:  
+#     sum_nn += num
+#     num += 1
+# print("Sum:", sum_nn)
 
 
-for i in range(4):
-    for j in range(4):
-        print("*",end="")
-    print()
+# # table multiplication
+
+# n=int(input("enter a number : "))
+# for i in range(1,11):
+#     print(f"{n} X {i} =",n*i)
 
 
-for i in range(5):
-    for j in range(i-1,4):
-        print("*",end="")
-    print()
+# for i in range(1,6):
+#     print("*"*i)
+
+# for i in range(5,0,-1):
+#     print("*"*i)
 
 
-for i in range(5):
-    for j in range(i+1):
-        print("*",end="")
-    print()
-
-for i in range(6):
-    for j in range(1,i+1):
-        print(j,end="")
-    print()
-
-for i in range(5,0,-1):
-    for j in range(i,0,-1):
-        print(j,end="")
-    print()
+# for i in range(4):
+#     for j in range(4):
+#         print("*",end="")
+#     print()
 
 
-i = 2
-while i <= 20:
-    print(i,end=",")
-    i += 2
+# for i in range(5):
+#     for j in range(i-1,4):
+#         print("*",end="")
+#     print()
+
+
+# for i in range(5):
+#     for j in range(i+1):
+#         print("*",end="")
+#     print()
+
+# for i in range(6):
+#     for j in range(1,i+1):
+#         print(j,end="")
+#     print()
+
+# for i in range(5,0,-1):
+#     for j in range(i,0,-1):
+#         print(j,end="")
+#     print()
+
+
+# i = 2
+# while i <= 20:
+#     print(i,end=",")
+#     i += 2
