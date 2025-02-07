@@ -25,7 +25,7 @@
 
 
 
-# lambda function
+# #lambda function
 
 # add=lambda x:x+x
 # print(add(4))
@@ -35,7 +35,7 @@
 # x=int(input("enter number:"))
 # print(evenOdd(x))
 
-# local scope
+# #local scope
 # def func():
 #     x=10
 #     print(x+5)
@@ -45,7 +45,7 @@
 
 
 
-# fibonacci
+# # fibonacci
 # def fibbo(n):
 #     if n <= 0:
 #         return "Invalid input"
@@ -62,16 +62,16 @@
 # n = int(input("Enter a positive number: "))
 # print(f"The {n}-th Fibonacci number is: {fibbo(n)}")
 
-# fibonacci series
+# #fibonacci series
 
-def fibo_series(n):
-    a, b = 0, 1
-    for _ in range(n):
-        print(a, end=" ")
-        a, b = b, a + b
+# def fibo_series(n):
+#     a, b = 0, 1
+#     for _ in range(n):
+#         print(a, end=" ")
+#         a, b = b, a + b
 
-n = int(input("Enter number of terms: "))
-fibo_series(n)
+# n = int(input("Enter number of terms: "))
+# fibo_series(n)
 
 
 # x=25  # global scope
@@ -82,3 +82,16 @@ fibo_series(n)
 
 # func()
 # print(x)
+
+ # check anagram
+# from collections import Counter
+
+# def IsAnagram(s,t):
+#     if len(s) != len(t):
+#         return False
+#     s_dict=Counter(s)
+#     t_dict=Counter(t)
+#     return s_dict==t_dict
+# s=input("enter string : ")
+# t=input("enter string : ")
+# print(IsAnagram(s,t))
