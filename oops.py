@@ -92,3 +92,53 @@ c.parentMethod()
 c.setattr(500)
 
 c.getattr()
+
+
+# multiple inheritence
+
+class A:
+    def method_a(self):
+        print("Method A")
+
+class B:
+    def method_b(self):
+        print("Method B")
+
+class C(A, B):  
+    def method_c(self):
+        print("Method C")
+
+c = C()
+c.method_a()  
+c.method_b()  
+c.method_c()  
+
+
+class Animal:
+    def speak(self):
+        print("Animal makes a sound")
+
+class Dog(Animal): 
+    def speak(self):
+        print("Dog barks")  
+
+d = Dog()
+d.speak()  
+
+
+# Polymorphism
+class Bird:
+    def speak(self):
+        print("Bird makes sound")
+
+class Parrot(Bird):
+    def speak(self):
+        print("Parrot talks")
+
+class Crow(Bird):
+    def speak(self):
+        print("Crow caws")
+
+# Using polymorphism
+for bird in [Parrot(), Crow()]:
+    bird.speak()
