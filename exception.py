@@ -60,8 +60,6 @@ def divide_num():
         num1 = int(input("Enter num1: "))  
         num2 = int(input("Enter num2: "))  
         result = num1 / num2  
-    except ValueError as ve:
-        print(f"Invalid input! Please enter numbers only. Error: {ve}")
     except ZeroDivisionError as zde:
         print(f"Cannot divide by zero! Error: {zde}")
     except Exception as e:
