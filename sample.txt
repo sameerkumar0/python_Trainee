@@ -1,3 +1,2 @@
-This is a sample text file
-Another line in the file
-New line appended 
+Add line one
+Add line two
