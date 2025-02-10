@@ -44,13 +44,31 @@
 
 # custom exception
 
-class NegativeNumberError(Exception):
-    def __init__(self,message="Negative numbers are not allowed "):
-        self.message=message
-        super().__init__(self.message)
-try:
-    num=int(input("enter a number :"))
-    if num<=0:
-        raise NegativeNumberError
-except NegativeNumberError as e:
-    print(e)
+# class NegativeNumberError(Exception):
+#     def __init__(self,message="Negative numbers are not allowed "):
+#         self.message=message
+#         super().__init__(self.message)
+# try:
+#     num=int(input("enter a number :"))
+#     if num<=0:
+#         raise NegativeNumberError
+# except NegativeNumberError as e:
+#     print(e)
+
+def divide_num():
+    try:
+        num1 = int(input("Enter num1: "))  
+        num2 = int(input("Enter num2: "))  
+        result = num1 / num2  
+    except ValueError as ve:
+        print(f"Invalid input! Please enter numbers only. Error: {ve}")
+    except ZeroDivisionError as zde:
+        print(f"Cannot divide by zero! Error: {zde}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+    else:
+        print(f"Result: {result}")
+    finally:
+        print("Execution completed.")
+
+divide_num()
