@@ -22,7 +22,7 @@ print(math.gcd(23,69))
 print(math.sqrt(5))
 
 
-os module
+# os module
 
 import os 
 cwd=os.getcwd()
@@ -35,7 +35,7 @@ print("Files and directories in '", path, "' :")
 print(dir_list) 
 
 
-random module
+# random module
 
 import random 
 num=random.random()
