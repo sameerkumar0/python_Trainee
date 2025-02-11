@@ -53,7 +53,7 @@ desktopObj.set_max_price(30000)
 print(desktopObj.sell())
 
 
-Inheritence
+# Inheritence
 
 class Parent:
     parentAttr=100
@@ -157,7 +157,7 @@ car1 = Car("Honda", "Model vsi")
 car1.display_info()  
 
 
-Encapsulation
+# Encapsulation
 class BankAccount:
     def __init__(self, balance):
         self.__balance = balance  # Private Variable(__ is used to define a private variable)
@@ -174,7 +174,7 @@ account.deposit(1500)
 print(account.get_balance()) 
 
 
-Inheritence
+# Inheritence
 class Animal:
     def speak(self):
         return "Some sound"
@@ -194,7 +194,7 @@ print(Cat.speak())
 
 
 
-str() (user friendly representation)
+# str() (user friendly representation)
 
 class car:
     def __init__(self,brand,model):
@@ -208,7 +208,7 @@ Car=car("Honda","Civic")
 print(Car)
 
 
-__repr__ (developer friedly represntation)
+# __repr__ (developer friedly represntation)
 
 class car:
     def __init__(self,brand,model):

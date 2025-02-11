@@ -42,7 +42,7 @@ except ValueError as e:
 
 
 
-custom exception
+# custom exception
 
 class NegativeNumberError(Exception):
     def __init__(self,message="Negative numbers are not allowed "):
