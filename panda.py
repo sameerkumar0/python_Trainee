@@ -76,3 +76,10 @@ print(dropDuplicate)
 
 cor=data['ReviewRating'].corr(data['PreviousPurchases'])
 print(cor)
+
+
+
+import matplotlib.pyplot as plt
+df=pd.read_csv('people.csv')
+df.plot(kind='scatter',x='Age',y='Name')
+plt.show()
