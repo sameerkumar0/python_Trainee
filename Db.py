@@ -16,10 +16,10 @@ CREATE TABLE IF NOT EXISTS users (
 """)
 
 # Insert data
-# def insert_user(name,age):
-#     cursor.execute("INSERT INTO users (name, age) VALUES(?,?)",(name,age))
-#     conn.commit()
-# insert_user("aman",21)
+def insert_user(name,age):
+    cursor.execute("INSERT INTO users (name, age) VALUES(?,?)",(name,age))
+    conn.commit()
+insert_user("aman",21)
 
 
 
