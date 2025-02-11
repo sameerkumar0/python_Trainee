@@ -68,3 +68,11 @@ print(data.loc[(data.Location=='Minnesota') & (data.ReviewRating>=2.5)])
 print(data.ReviewRating.describe())
 print(data.isna().sum())
 print(data.isnull().sum())
+print("Max Number of Row is :",pd.options.display.max_rows) 
+print(data.info())
+print(data.duplicated().sum()) # show all duplicate values present in dataset
+dropDuplicate=data.drop_duplicates() # remove all duplicate value form dataset
+print(dropDuplicate)
+
+cor=data['ReviewRating'].corr(data['PreviousPurchases'])
+print(cor)
