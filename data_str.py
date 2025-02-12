@@ -186,3 +186,64 @@ b = {1, 2, 3, 4, 5}
 print(a.issubset(b))  
 print(b.issuperset(a))  
 
+comb=[(x,y)for x in [1,2,3] for y in [3,4,5] if x!=y] #list comprehension
+print(comb)
+
+# zip function (combine the multiple iterable  into a single iterable )
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 35]
+
+zipped = zip(names, ages)
+print(list(zipped))
+
+# using for loop
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 35]
+
+for name, age in zip(names, ages):
+    print(f"{name} is {age} years old.")
+
+
+# nested tuple
+t=1254,5464,'hello'
+u=t,(5,6,87,'you')
+print(u)
+
+
+# set comprehension
+
+a={x for x in 'abracadabra' if x not in 'abc'}
+print(a)
+
+
+# array min value
+
+array=[7,5,6,98,45,14,52]
+minVal=array[0]
+for i in array:
+    if  i< minVal:
+        minVal=i
+print("Lowest values is :",minVal)
+
+
+# binary search 
+def binary_serach(arr,target):
+    left=0
+    right=len(arr)-1
+    while left<=right:
+        mid=(left+right) //2
+        if arr[mid]==target:
+            return mid
+        elif arr[mid]<target:
+            left=mid+1
+        else:
+            right=mid-1
+    return -1
+arr = [1, 3, 5, 7, 9, 11, 13, 15, 17]
+target = int(input("enter target value :"))
+result = binary_serach(arr, target)
+
+if result != -1:
+    print(f"Element found at index {result}")
+else:
+    print("Element not found")
