@@ -71,6 +71,6 @@ print(np.hstack((a,b)))
 arr = np.array([1, 2, 3, 4, 5, 6])
 print(np.split(arr,2)) # split the array in two equal parts
 
-# filter array
+# filter array function
 arr=np.array([10,20,30,50,40,])
 print(arr[arr>20])
