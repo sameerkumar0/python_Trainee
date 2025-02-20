@@ -47,23 +47,23 @@ import requests
 # print(response.json())
 
 
-# # using api key (get weather data)
-# import requests
+# using api key (get weather data)
+import requests
 
-# API_KEY = "dc8ba822fafa4d0bacf53141251302"  #API Key
-# city =input("Enter city : ")
+API_KEY = "dc8ba822fafa4d0bacf53141251302"  #API Key
+city =input("Enter city : ")
 
-# url = f"http://api.weatherapi.com/v1/current.json?key={API_KEY}&q={city}"
+url = f"http://api.weatherapi.com/v1/current.json?key={API_KEY}&q={city}"
 
-# response = requests.get(url)
+response = requests.get(url)
 
-# if response.status_code == 200:
-#     weather_data = response.json()
-#     print(f"City: {weather_data['location']['name']}")
-#     print(f"Temperature: {weather_data['current']['temp_f']} °F")
-#     print(f"Weather: {weather_data['current']['condition']['text']}")
-# else:
-#     print("Failed to fetch data. Error:", response.status_code, response.text)
+if response.status_code == 200:
+    weather_data = response.json()
+    print(f"City: {weather_data['location']['name']}")
+    print(f"Temperature: {weather_data['current']['temp_f']} °F")
+    print(f"Weather: {weather_data['current']['condition']['text']}")
+else:
+    print("Failed to fetch data. Error:", response.status_code, response.text)
 
 
 
