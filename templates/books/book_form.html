@@ -1,0 +1,8 @@
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="title" placeholder="Title" value="{{ book.title|default:'' }}"><br>
+    <input type="text" name="author" placeholder="Author" value="{{ book.author|default:'' }}"><br>
+    <input type="date" name="published_date" value="{{ book.published_date|default:'' }}"><br>
+    <button type="submit">Save</button>
+</form>
+<a href="{% url 'book-list' %}">Cancel</a>
