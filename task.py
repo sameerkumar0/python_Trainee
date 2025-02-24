@@ -173,4 +173,4 @@ data=pd.DataFrame(
 data.to_csv("Toys1.csv",index=True,index_label="Index")
  
  
-# driver.quit()
+driver.quit()

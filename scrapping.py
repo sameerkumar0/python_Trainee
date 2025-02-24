@@ -1,13 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-
-import time
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
 # url="https://www.flipkart.com/search?q=mobiles&as=on&as-show=on&otracker=AS_Query_TrendingAutoSuggest_1_0_na_na_na&otracker1=AS_Query_TrendingAutoSuggest_1_0_na_na_na&as-pos=1&as-type=TRENDING&suggestionId=mobiles&requestId=28b62c9d-1a5f-458f-b337-126ea2011cdd&as-backfill=on"
 # response=requests.get(url)
 # if response.status_code==200:
@@ -89,6 +82,14 @@ from selenium.webdriver.chrome.options import Options
 
 
 
+import time
+import pandas as pd
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+
 # Set up Selenium WebDriver with headless mode
 chrome_options = Options()
 chrome_options.add_argument("--headless")  
@@ -101,59 +102,51 @@ chrome_options.add_argument("--disable-dev-shm-usage")
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
+# Flipkart URL
 url = "https://www.flipkart.com/search?sid=tyy%2C4io&otracker=CLP_Filters&p%5B%5D=facets.ram%255B%255D%3D8%2BGB%2Band%2BAbove&page=2"
 
 # Open the URL
 driver.get(url)
 
 # Wait for the page to load
-time.sleep(5)  
+time.sleep(5)  # Adjust based on network speed
 
 # Lists to store data
 product_name = []
 price = []
 ratings = []
-image=[]
 
+# Scrape product names
 name_elements = driver.find_elements(By.CLASS_NAME, "KzDlHZ")
 for name in name_elements:
     product_name.append(name.text.strip())
 
+# Scrape prices
 price_elements = driver.find_elements(By.CLASS_NAME, "Nx9bqj")
 for p in price_elements:
     price.append(p.text.strip())
 
+# Scrape ratings
 rating_elements = driver.find_elements(By.CLASS_NAME, "XQDdHH")
 for r in rating_elements:
     ratings.append(r.text.strip() if r.text else "No rating")
 
-image_elements = driver.find_elements(By.TAG_NAME, "img")
-for img in image_elements:
-    img_url = img.get_attribute("src")
-    if img_url and "flipkart" in img_url:
-        image.append(img_url)
-# manage the length of the extracted data
-max_length = max(len(product_name), len(price), len(ratings),len(image))
+# Ensure lists are aligned
+max_length = max(len(product_name), len(price), len(ratings))
 product_name += ["N/A"] * (max_length - len(product_name))
 price += ["N/A"] * (max_length - len(price))
 ratings += ["No rating"] * (max_length - len(ratings))
-image += ["No Image"] * (max_length - len(image))
 
-
-# Store in DataFrame
+# Store data in a DataFrame
 df = pd.DataFrame({
     "Product Name": product_name,
     "Price": price,
-    "Ratings": ratings,
-    "Image Url":image
+    "Ratings": ratings
 })
-# print(df)
 
-# Save to CSV
-df.to_csv("flipkart_products.csv", index=True)
+# Save data to CSV
+df.to_csv("flipkart_products.csv", index=False)
 print("Data saved to flipkart_products.csv")
 
-# Close browser
+# Close the browser
 driver.quit()
-
-
