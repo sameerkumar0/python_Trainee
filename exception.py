@@ -10,7 +10,7 @@ except ZeroDivisionError:
 
 a = ["10", "twenty", 30]  # Mixed list of integers and strings
 try:
-    total = int(a[0]) + int(a[1])  # 'twenty' cannot be converted to int
+    total = int(a[0]) + int(a[1])  
     
 except (ValueError, TypeError) as e:
     print("Error", e)

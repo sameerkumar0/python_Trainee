@@ -46,7 +46,7 @@ print(data['Location'][2])
 # # # indexing 
 # # # index based selection (iloc())
 print(data.iloc[0]) # selecting first index
-print(data.iloc[1:3,2]) # 1:3 slects index and ,2 selects row which we want
+print(data.iloc[1:3,2]) # 1:3 slects index and ,2 selects row
 
 print(data.iloc[[0,1,2],0:3])
 
