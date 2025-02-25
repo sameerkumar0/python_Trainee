@@ -11,4 +11,8 @@ class Book(models.Model):
     published_date = models.DateField()
 
     def __str__(self):
+<<<<<<< HEAD
         return self.title
+=======
+        return self.author
+>>>>>>> upstream/main
